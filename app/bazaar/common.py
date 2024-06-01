@@ -4,7 +4,7 @@ from app import mysql
 
 @bp.route('/media/<path:filename>')
 def uploaded_file(filename):
-    return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
+    return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename, conditional=True)
 
 @bp.route("/")
 def index():
