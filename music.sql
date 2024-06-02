@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2024 at 06:48 PM
+-- Generation Time: Jun 02, 2024 at 07:53 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -29,16 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `author` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `picture` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `author`
 --
 
-INSERT INTO `author` (`id`, `name`, `picture`) VALUES
-(1, 'Zeljko Samardzic', 'zeljko.jpg');
+INSERT INTO `author` (`id`, `name`) VALUES
+(2, 'Zeljko Samardzic');
 
 -- --------------------------------------------------------
 
@@ -50,6 +49,14 @@ CREATE TABLE `genre` (
   `id` int(11) NOT NULL,
   `genre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `genre`
+--
+
+INSERT INTO `genre` (`id`, `genre`) VALUES
+(1, 'Pop'),
+(2, 'ex-yu rock');
 
 -- --------------------------------------------------------
 
@@ -91,6 +98,14 @@ CREATE TABLE `song` (
   `genre_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `song`
+--
+
+INSERT INTO `song` (`id`, `title`, `duration`, `song`, `author_id`, `genre_id`) VALUES
+(1, 'Ja te volim vise (9000)', '00:03:43', 'Zeljko_Samardzic_-_Ja_te_volim_vise_9000_milja.mp3', 2, 1),
+(2, 'Ljubavnik', '00:04:51', 'Ljubavnik.mp3', 2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -108,6 +123,14 @@ CREATE TABLE `user` (
   `user_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `first_name`, `last_name`, `username`, `password`, `email`, `phone_number`, `user_type`) VALUES
+(3, 'Marko', 'Markovic', 'marko', 'scrypt:32768:8:1$V7j1EgsfJhEj6kVy$1c13994150b39ae85dd2c96e4852d8421fa4e5e4da4346c31f2890350eb94eb8727b0ddc14cc3dd0c75d8e47c90ada555166b596921f9e0791f8c69ff8a607e7', 'marko@gmail.com', '+38269222222', 1),
+(4, 'admin', 'adminic', 'admin', 'scrypt:32768:8:1$tRGde5bX4682CD5u$b11f16bc803d1609a79d55a22e5a344bd532510977b8c3f8884d23ea359ae871438eb124c62618ddc997b50ae9ee1bde8428685c939e372ac7121954172ca1a0', 'admin@soundbazaar.com', '+38269111111', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -118,6 +141,14 @@ CREATE TABLE `user_type` (
   `id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_type`
+--
+
+INSERT INTO `user_type` (`id`, `type`) VALUES
+(1, 'korisnik'),
+(2, 'admin');
 
 --
 -- Indexes for dumped tables
@@ -180,13 +211,13 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `playlist`
@@ -204,19 +235,19 @@ ALTER TABLE `playlist_entry`
 -- AUTO_INCREMENT for table `song`
 --
 ALTER TABLE `song`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_type`
 --
 ALTER TABLE `user_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

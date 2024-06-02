@@ -19,13 +19,13 @@
                         <a href="/songs/" class="text-white">Pjesme</a>
                     </h6>
                 </div>
-
+                {% if session.get('user_type') == 2 %}
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="/songs/upload/" class="text-white">Uploaduj</a>
                     </h6>
                 </div>
-
+                {% endif %}
                 <div class="col-md-2">
                     <h6 class="text-uppercase font-weight-bold">
                         <a href="/contact/" class="text-white">Kontakt</a>

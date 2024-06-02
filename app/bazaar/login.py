@@ -51,4 +51,4 @@ def register():
 def logout():
     session.pop('user', None)
     session.pop('user_type', None)
-    return redirect('/login')
+    return redirect('/login/')
