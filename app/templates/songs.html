@@ -38,7 +38,11 @@
                 <source src="/media/{{song.song}}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-
+            <a href="/" class="player-link"><i class="bi bi-music-note-list"></i></a>
+            {% if session.get('user_type') == 2 %}
+            <a href="/songs/update/{{song.id}}/" class="player-link"><i class="bi bi-pencil-fill"></i></a>
+            <a href="/songs/delete/{{song.id}}/" class="player-link"><i class="bi bi-trash-fill"></i></a>
+            {% endif %}
         </div>
     </div>
     {% endfor %}

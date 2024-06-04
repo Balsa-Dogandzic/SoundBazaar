@@ -27,8 +27,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 900px;
+  max-width: 80%;
   margin: 50px auto;
+}
+
+.player-link {
+  color: #000;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
 }
 
 .album-art img {
