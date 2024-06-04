@@ -9,6 +9,10 @@ def songs():
     cursor = mysql.connection.cursor()
     cursor.execute("SELECT song.*, author.name FROM song JOIN author ON song.author_id = author.id ORDER BY song.title")
     songs = cursor.fetchall()
+    if session.get('user'):
+        cursor.execute(f"SELECT * FROM playlist WHERE user_id={session.get('user')} ORDER BY title")
+        playlists = cursor.fetchall()
+        return render_template("songs.html", songs=songs, playlists=playlists)
     return render_template("songs.html", songs=songs)
 
 
