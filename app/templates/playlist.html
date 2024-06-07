@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{playlist.title}}</title>
+</head>
+
+<body>
+    <h1>{{playlist.title}}</h1>
+    <p>{{playlist.created_at}}</p>
+    <p>{{playlist.description|safe}}</p>
+    <table>
+        <tr>
+            <th>Naziv pjesme</th>
+            <th>Autor</th>
+            <th>Pusti</th>
+            <th>Obrisi</th>
+        </tr>
+        {% for song in songs %}
+        <tr>
+            <td>{{song.title}}</td>
+            <td>{{song.name}}</td>
+            <td>
+                <audio controls>
+                    <source src="/media/{{song.song}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+            <td><a href="/playlists/song/remove/{{song.entry}}/">remove song</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/playlists/delete/{{playlist.id}}/">Remove playlist</a></p>
+</body>
+
+</html>

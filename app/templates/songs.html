@@ -57,7 +57,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="playlist-modal-form">
+                    <form id="playlist-modal-form" action="/playlists/song/add/" method="post">
                         <div class="mb-3">
                             <label for="selectOption" class="form-label">Vase plejliste</label>
                             <select class="form-select" id="selectOption" name="playlist">
@@ -126,9 +126,9 @@
         var myModal = document.getElementById('myModal');
         myModal.addEventListener('show.bs.modal', function (event) {
             var button = event.relatedTarget;
-            var memoId = button.getAttribute('data-id');
+            var id = button.getAttribute('data-id');
             var form = document.getElementById('playlist-modal-form');
-            form.action = `/playlist/add/${memoId}/`;
+            form.action = `/playlists/song/add/${id}/`;
         });
     </script>
 
