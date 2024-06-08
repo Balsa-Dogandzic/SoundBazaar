@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2024 at 07:53 PM
+-- Generation Time: Jun 08, 2024 at 09:16 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -37,7 +37,8 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`id`, `name`) VALUES
-(2, 'Zeljko Samardzic');
+(2, 'Zeljko Samardzic'),
+(3, 'Crvena jabuka');
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,11 @@ CREATE TABLE `genre` (
 
 INSERT INTO `genre` (`id`, `genre`) VALUES
 (1, 'Pop'),
-(2, 'ex-yu rock');
+(2, 'ex-yu rock'),
+(3, 'Folk'),
+(4, 'Rock & Roll'),
+(5, 'EDM'),
+(6, 'Hip-Hop');
 
 -- --------------------------------------------------------
 
@@ -67,9 +72,18 @@ INSERT INTO `genre` (`id`, `genre`) VALUES
 CREATE TABLE `playlist` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `created_at` date NOT NULL,
   `description` text NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `playlist`
+--
+
+INSERT INTO `playlist` (`id`, `title`, `created_at`, `description`, `user_id`) VALUES
+(1, 'Zabavnaa', '2024-06-07', 'Pusti nesto zabavno, ponasaj se prirodno.', 3),
+(2, 'Ex-Yu Nostalgija', '2024-06-07', 'Mogao si na klupi da spavas...', 3);
 
 -- --------------------------------------------------------
 
@@ -82,6 +96,15 @@ CREATE TABLE `playlist_entry` (
   `song_id` int(11) NOT NULL,
   `playlist_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `playlist_entry`
+--
+
+INSERT INTO `playlist_entry` (`id`, `song_id`, `playlist_id`) VALUES
+(1, 1, 1),
+(2, 3, 2),
+(3, 4, 2);
 
 -- --------------------------------------------------------
 
@@ -104,7 +127,9 @@ CREATE TABLE `song` (
 
 INSERT INTO `song` (`id`, `title`, `duration`, `song`, `author_id`, `genre_id`) VALUES
 (1, 'Ja te volim vise (9000)', '00:03:43', 'Zeljko_Samardzic_-_Ja_te_volim_vise_9000_milja.mp3', 2, 1),
-(2, 'Ljubavnik', '00:04:51', 'Ljubavnik.mp3', 2, 1);
+(3, 'Dirlija', '00:03:58', 'Crvena_jabuka_-_Dirlija_Official_lyric_video.mp3', 3, 2),
+(4, 'Da mi je do nje', '00:04:43', 'CRVENA_JABUKA_-_DA_MI_JE_DO_NJE.mp3', 3, 2),
+(5, 'Ljubavnik', '00:04:51', 'Ljubavnik.mp3', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -211,31 +236,31 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `playlist`
 --
 ALTER TABLE `playlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `playlist_entry`
 --
 ALTER TABLE `playlist_entry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `song`
 --
 ALTER TABLE `song`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
