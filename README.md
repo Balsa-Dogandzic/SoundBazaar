@@ -25,27 +25,27 @@ Here are some screenshots of the application.
 
 ### Song page for a standard user
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/user_songs.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/user_songs.png?raw=true)
 
 ### Song page for a admin user
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/admin_songs.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/admin_songs.png?raw=true)
 
 ### Login page
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/login.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/login.png?raw=true)
 
 ### Register
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/register.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/register.png?raw=true)
 
 ### Upload song
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/upload_song.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/upload_song.png?raw=true)
 
 ### Update song
 
-![alt text](https://github.com/Balsa-Dogandzic/FlaskECommerce/blob/main/docs/SS/update_song.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/update_song.png?raw=true)
 
 ## Contributors
 
