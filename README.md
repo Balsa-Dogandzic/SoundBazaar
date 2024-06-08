@@ -37,7 +37,7 @@ Here are some screenshots of the application.
 
 ### Register
 
-![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/register.png?raw=true)
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/signup.png?raw=true)
 
 ### Upload song
 
