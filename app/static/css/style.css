@@ -108,3 +108,183 @@ body {
   border-radius: 15px;
   padding: 40px 80px 40px 80px;
 }
+
+/* playlists.html */
+
+.container-all-playlist {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container-all-playlist h1 {
+  text-align: center;
+  color: #444;
+}
+
+.container-all-playlist table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.container-all-playlist table thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+.container-all-playlist thead tr th {
+  padding: 10px;
+  text-align: left;
+}
+
+.container-all-playlist table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.container-all-playlist table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.container-all-playlist table tbody td {
+  padding: 10px;
+}
+
+.container-all-playlist table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.visit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.visit-btn:hover {
+  background-color: #0056b3;
+}
+
+.visit-btn:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+.all-lists {
+  background: radial-gradient(#ffc6ff, #88a8ab);
+}
+
+.div-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* one_playlist.html */
+
+.container-one-playlist {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container-one-playlist header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-one-playlist header h1 {
+  color: #444;
+}
+
+.container-one-playlist header p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.delete-playlist {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-playlist:hover {
+  background-color: #e85d4ddc;
+}
+
+.container-one-playlist table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.container-one-playlist table thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+.container-one-playlist thead tr th {
+  padding: 10px;
+  text-align: left;
+}
+
+.container-one-playlist table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.container-one-playlist table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.container-one-playlist table tbody td {
+  padding: 10px;
+}
+
+.container-one-playlist table tbody td .play-song {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.play-song:hover {
+  background-color: #0768d0e7;
+}
+
+.container-one-playlist table tbody td .delete-song {
+  color: #e74c3c;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.container-one-playlist table tbody td .delete-song:hover {
+  text-decoration: underline;
+}
+
+.container-one-playlist table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.container-one-playlist {
+  margin-top: 50px;
+}
