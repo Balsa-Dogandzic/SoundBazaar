@@ -1,8 +1,3 @@
-# TODO
-
-1. Page for playlists
-2. Page for a single playlist
-
 # SoundBazaar
 
 Webpage for listening to music and making playlists.
@@ -38,6 +33,14 @@ Here are some screenshots of the application.
 ### Register
 
 ![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/signup.png?raw=true)
+
+### Playlists
+
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/playlists.png?raw=true)
+
+### Single playlist page
+
+![alt text](https://github.com/Balsa-Dogandzic/SoundBazaar/blob/main/docs/SS/playlist.png?raw=true)
 
 ### Upload song
 

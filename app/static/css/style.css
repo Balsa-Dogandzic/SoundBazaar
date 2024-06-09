@@ -112,7 +112,7 @@ body {
 /* playlists.html */
 
 .container-all-playlist {
-  max-width: 800px;
+  max-width: 80%;
   margin: 0 auto;
   margin-top: 50px;
   padding: 20px;
@@ -124,22 +124,23 @@ body {
 .container-all-playlist h1 {
   text-align: center;
   color: #444;
+  margin: 2rem 0;
 }
 
 .container-all-playlist table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  text-align: center;
 }
 
 .container-all-playlist table thead {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
 }
 
 .container-all-playlist thead tr th {
   padding: 10px;
-  text-align: left;
 }
 
 .container-all-playlist table tbody tr {
@@ -163,7 +164,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #007BFF;
+  background-color: #007bff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -191,10 +192,10 @@ body {
   justify-content: center;
 }
 
-/* one_playlist.html */
+/* playlist.html */
 
 .container-one-playlist {
-  max-width: 800px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -204,24 +205,26 @@ body {
 
 .container-one-playlist header {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .container-one-playlist header h1 {
+  margin: 1rem;
   color: #444;
 }
 
 .container-one-playlist header p {
   color: #666;
-  margin: 5px 0;
+  margin: 20px 0;
 }
 
 .delete-playlist {
+  text-decoration: none;
   background-color: #e74c3c;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-top: 10px;
+  margin: 1rem;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -237,7 +240,7 @@ body {
 }
 
 .container-one-playlist table thead {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
 }
 
@@ -259,7 +262,7 @@ body {
 }
 
 .container-one-playlist table tbody td .play-song {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 5px 10px;
